@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEKOSMU</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="/" class="logo">ABC</a>
+
+
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="product">Service</a>
+        <a href="about">profile</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+!-- prodcuts section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> Mulai <span>Cekosmu</span> </h1>
+    <h3><span>Isi pilihan dibawah ini sesuai dengan yang kamu inginkan</span></h3>
+    <form action="/product" method="POST">
+    <h2> Tipe Kos </h2>
+    <div class="select">
+       <select name="tipe" id="format">
+          <option selected disabled>Select.........</option>
+          <option value="1">Putra</option>
+          <option value="2">Putri</option>
+          <option value="0">Campur</option>
+       </select>
+    </div>
+    
+    <h2> Jumlah Orang per Kamar </h2>
+    <div class="select">
+       <select name="orang" id="format">
+          <option selected disabled>Select.........</option>
+          <option value="0">1</option>
+          <option value="1">2</option>
+       </select>
+    </div>
+    
+    <h2> AC/Non-AC </h2>
+    <div class="select">
+       <select name="ac" id="format">
+          <option selected disabled>Select.........</option>
+          <option value="1">AC </option>
+          <option value="0">Non-AC</option>
+       </select>
+    </div>
+    
+    <h2> Kamar Mandi Dalam / Luar </h2>
+    <div class="select">
+       <select name="km" id="format">
+          <option selected disabled>Select.........</option>
+          <option value="1">Kamar Mandi Dalam</option>
+          <option value="0">Kamar Mandi Luar</option>
+       </select>
+    </div>
+    
+    <h2> Wifi/Non Wifi </h2>
+    <div class="select">
+       <select name="wifi" id="format">
+          <option selected disabled>Select.........</option>
+          <option value="1">Wifi</option>
+          <option value="0">Non Wifi</option>
+       </select>
+    </div>
+
+    <h2> Listrik </h2>
+    <div class="select">
+       <select name="listrik" id="format">
+          <option selected disabled>Select.........</option>
+          <option value="1">Sudah Termasuk</option>
+          <option value="0">Token</option>
+       </select>
+    </div>
+
+    <div class="btn-block" id="result">
+      <button type="submit" value="submit">Hitung</button>
+    </div>
+   </form>
+   
+   <h2>Prediksi harga: {{ result }}</h2>
+<!---Set placeholder for prediction output--->
+  
+</section>
+
+<!-- prodcuts section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="credit"> created by <span> ABC</span> </div>
+
+</section>
+
+<!-- footer section ends -->
+    
+</body>
+</html>
